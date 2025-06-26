@@ -1,5 +1,5 @@
 // products data
-const pdtList = [
+export const pdtList = [
   {
     id: "0000-1100-qwas-//[...]",
     title: "Navy Tack Pant",
@@ -145,7 +145,7 @@ const pdtList = [
     title: "WIndbreaker",
     price: 129.00,
     sizeList: ["S", "M", "L", "XL"],
-    category: "bottoms",
+    category: "tops",
     release: "",
     pdtImgs: [
       "https://framerusercontent.com/images/VhBmLMO9TMZleaFMxqAqv2topKE.jpg?scale-down-to=1024",

@@ -34,4 +34,10 @@ export function headerFunction() {
   subNavBtn.setAttribute("aria-controls", "nav-menu");
   navMenu.setAttribute("aria-hidden", "true");
   navMenu.id = "nav-menu";
+
+
+  document.querySelector(".cart")
+    .addEventListener("click", () => {
+      window.location.href = "../HTML/cart.html"
+    })
 }
