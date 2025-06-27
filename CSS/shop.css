@@ -155,79 +155,6 @@ body {background-color: var(--white);}
   }
 }
 
-.get-news-section {
-  position: relative;
-  display: grid;
-  place-items: center;
-}
-
-.get-news-img {
-  height: 600px;
-  width: 100%;
-
-  & img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
-}
-
-.get-news-section >div:nth-of-type(2) {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  color: var(--white);
-  text-align: center;
-}
-
-.get-news-section >div:nth-of-type(2) h2 {
-  font-size: 2.8rem;
-  font-weight: 600;
-  text-wrap: nowrap;
-  letter-spacing: -.1rem;
-}
-
-.get-news-section >div:nth-of-type(2) form {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 24px;
-}
-
-.get-news-section >div:nth-of-type(2) form h4 {
-  font-size: 1.12rem;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
-.get-news-section input[type= "email"] {
-  padding: 8px;
-  height: 38px;
-  width: 220px;
-}
-
-.get-news-section input[type= "email"]::placeholder {
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: var(--d_gray);
-}
-
-.get-news-section input[type= "email"]:focus {outline: none;}
-
-.get-news-section input[type= "submit"] {
-  font-size: 1.12rem;
-  font-weight: 600;
-  color: var(--white);
-  background-color: var(--black);
-  border-radius: 8px;
-  border: none;
-  padding: 0 24px;
-  height: 38px;
-  cursor: pointer;
-}
-
 
 
 @media screen and (min-width: 810px) {
@@ -250,16 +177,6 @@ body {background-color: var(--white);}
 
   .product-card:hover .add-cart-btn {display: flex; transition: .25s ease;}
 
-  .get-news-section >div:nth-of-type(2) {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 60%;
-  }
-  
-  .get-news-section >div:nth-of-type(2) h2 {
-    font-size: 3.6rem;
-  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -272,16 +189,5 @@ body {background-color: var(--white);}
 
   .product-list {
     grid-template-columns: repeat(4, 1fr);
-  }
-
-  .get-news-section >div:nth-of-type(2) {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 80%;
-  }
-  
-  .get-news-section >div:nth-of-type(2) h2 {
-    font-size: 4.8rem;
   }
 }
