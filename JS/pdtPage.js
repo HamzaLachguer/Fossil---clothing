@@ -14,6 +14,9 @@ function initProductPage() {
   const productClickedId = localStorage.getItem("pdtClicked");
   const product = pdtList.find(p => p.id === productClickedId);
   
+  //check if !product
+  //
+
   const {title, price, sizeList, pdtImgs, description} = product;
   
   const productImgList = document.querySelector(".product-img-list");
@@ -80,7 +83,7 @@ function initProductPage() {
   // update slide function
   function updateSlider() {
     productImgList.style.transform = 
-      `translateX(calc(-${currentSlide} * (100% + 16px))`;
+      `translateX(calc(-${currentSlide} * (100% + 16px)))`;
   
     dotsList.forEach((dot, index) => {
       dot.classList.toggle("dot-active", index === currentSlide);
@@ -113,6 +116,9 @@ function initProductPage() {
   
       drop.addEventListener("click", () => {
         drop.classList.toggle("close-dropdown");
+
+        // aria atribuutes
+        //
       })
     })
   
@@ -122,8 +128,17 @@ function initProductPage() {
       const productInCart = cart.find(x => x.id === productClickedId);
   
       const selectedSize = [...sizeContainer.querySelectorAll("li")]
-        .find(s => s.classList.contains("size-active"))
+        .find(s => s.classList.contains("size-active"));
 
+        // check if !selectedSize
+        //
+        if (!selectedSize) {
+          alert("Please select a size first!");
+          return;
+        }
+
+      // check if product in cart and product size is the same
+      //
       if (!productInCart) {
         cart.push({
           id: productClickedId,

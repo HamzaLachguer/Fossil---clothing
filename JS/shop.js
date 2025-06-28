@@ -11,6 +11,8 @@ headerFunction()
 const categoryList = [...document.querySelectorAll(".category-btn")];
 const productList = document.querySelector(".product-list");
 
+// if (!productList || !categoryList.length) return;
+
 categoryList.forEach(btn => {
   btn.addEventListener('click', () => {
     categoryList.forEach(b => b.classList.remove("category-btn-active"));
@@ -31,6 +33,8 @@ function filterGrid(categoryBtnId) {
   if (categoryBtnId === "all") {
     filteredProducts = pdtList;
   } else {
+    // check if product is new release or if it is seasonal
+    //
     filteredProducts = pdtList.filter(pdt => pdt.category === categoryBtnId)
   }
 
@@ -65,6 +69,7 @@ function generateHtml(list) {
   });
   productList.innerHTML = pdtGridHTML;
 }
+
 generateHtml(pdtList)
 
 
@@ -99,6 +104,8 @@ function cardInit() {
         const productId = card.dataset.pdtId;
         const productInCart = cart.find(x => x.id === productId);
 
+        // check if product in cart and product size is the same
+        //
         if (!productInCart) {
           cart.push({
             id: productId,

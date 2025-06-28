@@ -5,14 +5,18 @@ export function headerFunction() {
   const subNavBtn = document.querySelector(".sub-nav-link");
   const dropIcon = subNavBtn.querySelector(".drop-icon");
   const subNav = document.querySelector(".sub-nav");
+
+  //
   
   subNavBtn.addEventListener("click", subMenuToggle)
   
   function subMenuToggle() {
     const isSubNavOpen = dropIcon.classList.toggle("close-drop-icon");
     subNav.classList.toggle("hide-sub-menu", isSubNavOpen);
+    subNavBtn.setAttribute("aria-expanded", !isSubNavOpen);
   
     // aria attributes
+    //
   }
   
   menuBtn.addEventListener("click", () => {

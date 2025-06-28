@@ -8,6 +8,7 @@ function generateCartHtml() {
     const product = pdtList.find(p => item.id === p.id);
   
     if (!product) return '';
+
     const {id, title, price, pdtImgs} = product;
     return cartHTML += `
       <div class="cart-item-card" data-pdt-id=${id}>
@@ -75,13 +76,16 @@ cartItemList.forEach(cartItem => {
     const productId = cartItem.dataset.pdtId;
     const itemInCart = cart.find(i => i.id === productId)
 
+    // check if !itemInCart
+    //
+
     if (e.target.closest(".increment")) {
       itemInCart.quantity ++;
       localStorage.setItem("cart", JSON.stringify(cart));
 
       
       const cartItemQuantity = cartItem.querySelector(".quantity");
-      const currentQuantity = Number(cartItemQuantity.textContent)
+      const currentQuantity = Number(cartItemQuantity.textContent);
       cartItemQuantity.textContent = currentQuantity + 1;
 
       const totalCartQuantity = document.querySelector(".cart-items-num");
@@ -92,6 +96,9 @@ cartItemList.forEach(cartItem => {
     }  
 
     else if (e.target.closest(".decrement")) {
+      if (itemInCart.quantity <= 1) {
+      // Trigger remove logic instead
+      return;}
       itemInCart.quantity --;
       localStorage.setItem("cart", JSON.stringify(cart));
 
@@ -108,7 +115,7 @@ cartItemList.forEach(cartItem => {
     }
 
     else if (e.target.closest(".remove-item-btn")) {
-      const newCart = cart.filter(p => p.id !== productId)
+      const newCart = cart.filter(p => p.id !== productId);
       
       cart.length = 0;  // Clear the array
       newCart.forEach(item => cart.push(item));
@@ -119,7 +126,7 @@ cartItemList.forEach(cartItem => {
       cartSubTotal.textContent = updateCartSubtotal().toFixed(2);
       document.querySelector(".cart-items-num")
         .innerHTML = cartItemsLength();
-      console.log(newCart)
+      console.log(newCart);
     }
   })
 })
@@ -135,6 +142,9 @@ function updateCartSubtotal() {
   return cart.reduce((total , item) => {
     const p = pdtList.find(pdt => pdt.id === item.id);
 
+    // check if !p
+    //
+
     return p ? total + (item.quantity * p.price) : total
-  }, 0)
+  }, 0);
 }
