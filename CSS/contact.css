@@ -1,0 +1,139 @@
+/* 
+  ***  STYLES CSS  ***
+______________________________  */
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+/* 
+  --- VARIABLES ---
+______________________________  */
+:root {
+  --black:  #111111;
+  --gray:   #cccccc;
+  --d_gray:   #aaaaaa;
+  --white:  #fff;
+}
+
+
+
+/* 
+  ---  ---
+______________________________  */
+.contact-form-container {
+  display: grid;
+  grid-template-columns: 1fr
+}
+
+.img-section {
+  height: 100%;
+  width: 100%;
+
+  & img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.contact-section {
+  padding: 60px 16px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.contact-section h1 {
+  font-size: 4.8rem;
+  font-weight: 600;
+}
+
+.contact-section label {
+  font-size: 1.12rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-section input,
+.contact-section textarea {
+  width: 100%;
+  padding: 12px 0;
+  border: none;
+  border-bottom: 1px solid var(--gray);
+}
+
+.contact-section input::placeholder,
+.contact-section textarea::placeholder {
+  font-family: inherit;
+  color: var(--gray);
+  font-weight: 1.2rem;
+}
+
+.contact-section input:focus,
+.contact-section textarea:focus {
+  outline: none;
+  border-bottom-color: var(--black);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+form div {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+input[type= "submit"] {
+  padding: 0 24px;
+  height: 38px;
+  background-color: var(--black);
+  color: var(--white);
+  font-family: inherit;
+  font-weight: 500;
+  width: fit-content;
+  border-radius: 4px;
+  border-bottom: none;
+}
+
+.contact-section >div {
+  font-size: 1.5rem;
+  font-weight: 600;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+}
+
+.contact-section >div div {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+
+@media screen and (min-width: 810px) {
+  .contact-form-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .img-section {height: 100vh;}
+
+  .contact-section {
+    padding: 0 16px;
+    justify-content: center;
+  }
+
+  .contact-section h1 {
+    font-size: 5.4rem;
+  }
+
+  form div {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
