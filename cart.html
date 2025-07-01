@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <title>Fossil - E-Commerce</title>
+
+    <link rel="shortcut icon" href="https://framerusercontent.com/images/ioU1UKxHdlbkQ49guOOFhapQ.jpg" type="image/x-icon">
+
+    <!-- 
+      // *** STYLES CSS ***
+    _____________________  -->
+    <link rel="stylesheet" href="/CSS/styles.css">
+    <link rel="stylesheet" href="/CSS/cart.css">
+    
+    <!-- 
+      // *** GOOGLE FONTS ***
+    _____________________  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+  </head>
+
+
+  <body>
+
+    <!-- HEADER -->
+    
+
+    <!-- MAIN -->
+    <main>
+      <div class="cart-container">
+        <div class="cart-head">
+
+          <div>
+            <h4>
+              <span class="cart-items-num">0</span>
+              Items in cart
+            </h4>
+          </div>
+
+          <button class="close-cart-btn">
+            <svg class="close-cart-icon" width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+
+        <div class="cart-body">
+
+          <div class="cart-empty"></div>
+
+          <div class="cart-not-empty">
+
+            <div class="cart-item-card">
+              <div class="item-img">
+                <img src="https://cdn.shopify.com/s/files/1/0733/1840/0228/files/Grey_Shorts_1.webp?v=1746380986" alt="" loading="lazy">
+              </div>
+
+              <div class="item-info">
+                <div>
+                  <div class="name-size">
+                    <h4 class="pdt-name">Grey Shorts</h4>
+                    <h5 class="pdt-size">
+                      size: <span class="size">S</span>
+                    </h5>
+                  </div>
+                  <div class="pdt-price">$59.00</div>
+                </div>
+
+                <div>
+                  <div class="quantity-control">
+                    <button class="increment">
+                      <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </button>
+                    <div class="quantity">1</div>
+                    <button class="decrement">
+                      <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5 12H19" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </button>
+                  </div>
+                  <button class="remove-item-btn">
+                    <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 7L7 17M7 7L17 17" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+
+        <div class="cart-foot">
+          <div class="sub-total">
+            <h3>
+              Subtotal
+              <span>$227.00</span>
+            </h3>
+          </div>
+
+          <div class="call-to-action">
+            <button class="check-out">check out</button>
+            <button class="clear-cart">clear cart</button>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    
+
+    <script type="module" src="/JS/checkout.js"></script>
+  </body>
+</html>

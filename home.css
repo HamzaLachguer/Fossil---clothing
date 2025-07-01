@@ -1,0 +1,75 @@
+/* 
+  ***  STYLES CSS  ***
+______________________________  */
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+
+/* 
+  --- VARIABLES ---
+______________________________  */
+:root {
+  --black:  #111111;
+  --gray:   #cccccc;
+  --white:  #fff;
+}
+
+
+
+/* 
+  --- HERO ---
+______________________________  */
+.hero-section {position: relative;}
+
+.media-container {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  & video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 200px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: calc(100% - 40px);
+}
+
+.home-nav-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
+
+.home-nav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.home-nav-link {
+  font-weight: 600;
+  color: var(--white);
+}
+
+.time-zone {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.time-zone span {
+  font-family: "PT Mono", monospace;
+  font-weight: 400;
+}

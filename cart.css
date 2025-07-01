@@ -1,0 +1,272 @@
+/* 
+  ***  STYLES CSS  ***
+______________________________  */
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+/* 
+  --- VARIABLES ---
+______________________________  */
+:root {
+  --black:  #111111;
+  --gray:   #cccccc;
+  --d_gray:   #aaaaaa;
+  --white:  #fff;
+}
+
+
+
+/* 
+  ---  ---
+______________________________  */
+.cart-container {
+  max-width: 500px;
+}
+
+.cart-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  border-bottom: 1px solid var(--gray);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--white);
+}
+
+.cart-head >div h4 {
+  font-size: 1.12rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cart-items-num {
+  font-size: 1.4rem;
+}
+
+.close-cart-btn {
+  height: 32px;
+  width: 32px;
+  display: grid;
+  place-items: center;
+}
+
+.close-cart-btn svg {
+  height: 22px;
+  width: 22px;
+  transition: .25s ease;
+}
+
+.close-cart-btn:hover .close-cart-icon {transform: rotate(90deg);}
+
+
+.cart-body {
+  height: calc(100vh - 180px - 0px);
+  overflow-x: hidden;
+}
+
+.cart-not-empty {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 65px;
+  width: 100%;
+}
+
+.cart-item-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0px 0px 24px;
+  border-bottom: 1px solid var(--gray);
+  margin-bottom: 10px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.item-img {
+  height: 175px;
+  width: 140px;
+  overflow: hidden;
+
+  & img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.item-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: calc(100% - 156px);
+  height: 175px;
+}
+
+.item-info >div:nth-of-type(1) {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.item-info >div:nth-of-type(2) {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.name-size {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pdt-name {
+  font-size: 1.12rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.pdt-size {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.pdt-size .size {color: var(--d_gray);}
+
+.pdt-price {
+  font-family: "PT Mono", monospace;
+  font-size: 1.2rem;
+}
+
+
+.quantity-control {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  padding: 4px;
+}
+
+.quantity-control .quantity {
+  height: 18px;
+  width: 18px;
+  display: grid;
+  place-items: center;
+  font-size: 1.2rem;
+}
+
+.increment,
+.decrement {
+  height: 18px;
+  width: 18px;
+  background-color: var(--gray);
+  display: grid;
+  place-items: center;
+}
+
+.increment svg,
+.decrement svg {
+  height: 15px;
+  width: 15px;
+}
+
+.increment:hover,
+.decrement:hover {
+  background-color: var(--d_gray);
+}
+
+.remove-item-btn {
+  height: 24px;
+  width: 24px;
+  background-color: var(--gray);
+  display: grid;
+  place-items: center;
+}
+
+.remove-item-btn svg {
+  height: 18px;
+  width: 18px;
+}
+
+.remove-item-btn:hover {
+  height: 24px;
+  width: 24px;
+  background-color: var(--d_gray);
+}
+
+.cart-foot {
+  padding: 16px 16px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid var(--gray);
+  background-color: var(--white);
+}
+
+.sub-total h3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+
+.sub-total h3 span {
+  font-family: "PT Mono", monospace;
+  font-size: 1.4rem;
+}
+
+.call-to-action {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.call-to-action button {
+  width: 100%;
+  height: 48px;
+  font-size: 1.12rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+}
+
+.check-out {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.check-out:hover {
+  background-color: #2a2a2a;
+}
+
+.clear-cart {
+  background-color: var(--gray);
+  color: var(--black);
+}
+
+.clear-cart:hover {
+  background-color: #bebebe;
+}
+
+@media screen and (min-width: 500px) {
+  .cart-not-empty,
+  .cart-head,
+  .cart-foot {
+    width: 500px;
+  }
+
+  .cart-container {margin: 0 auto;}
+}

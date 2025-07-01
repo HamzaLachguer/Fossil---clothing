@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <title>Fossil - E-Commerce</title>
+
+    <link rel="shortcut icon" href="https://framerusercontent.com/images/ioU1UKxHdlbkQ49guOOFhapQ.jpg" type="image/x-icon">
+
+    <!-- 
+      // *** STYLES CSS ***
+    _____________________  -->
+    <link rel="stylesheet" href="/CSS/styles.css">
+    <link rel="stylesheet" href="/CSS/shop.css">
+    
+    <!-- 
+      // *** GOOGLE FONTS ***
+    _____________________  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+  </head>
+
+
+  <body>
+
+    <!-- HEADER -->
+    <header class="header">
+      <nav class="nav-menu close-nav">
+        <ul class="nav-list">
+          <h5>(NAVIGATE)</h5>
+          <li class="nav-link"><a href="/HTML/home.html">Home</a></li>
+
+          <li class="nav-link sub-nav-link">
+            <button href="/HTML/shop.html">Shop 
+              <span class="drop-icon close-drop-icon"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 15L12 9L6 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </button>
+            <ul class="sub-nav hide-sub-menu">
+              <li><a href="">All</a></li>
+              <li><a href="">Tops</a></li>
+              <li><a href="">Bottoms</a></li>
+              <li><a href="">New</a></li>
+              <li><a href="">Summer 2025</a></li>
+            </ul>
+          </li>
+              
+          <li class="nav-link"><a href="/HTML/brand.html">Brand</a></li>
+          <li class="nav-link"><a href="/HTML/journal.html">Journal</a></li>
+          <li class="nav-link"><a href="/HTML/contact.html">Contact</a></li>
+        </ul>
+
+        <div class="secondary-nav">
+          <ul>
+            <h5>(CUSTOMER CARE)</h5>
+            <li><a href="">My Account</a></li>
+            <li><a href="">FAQ</a></li>
+            <li><a href="">Our Store</a></li>
+          </ul>
+          <ul>
+            <h5>(FOLLOW US)</h5>
+            <li><a href="">Instagram</a></li>
+            <li><a href="">Facebook</a></li>
+            <li><a href="">Threads</a></li>
+            <li><a href="">X.com</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <a href="/HTML/home.html" class="logo">
+        <img src="https://framerusercontent.com/images/0crKlu54gg9tRqqrLjsZNIanC8.svg" alt="">
+      </a>
+
+      <div class="utility-bar">
+        <button class="search">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" focusable="false" color="var(--token-ccd6e3d7-3dfe-4f05-babe-64e7e746d67a, rgb(34, 34, 34))"><g color="var(--token-ccd6e3d7-3dfe-4f05-babe-64e7e746d67a, rgb(34, 34, 34))" weight="regular"><path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path></g></svg>
+        </button>
+
+        <button class="account-btn">Account</button>
+
+        <button class="cart">cart
+          <span>(</span>
+          <span class="cart-length">0</span>
+          <span>)</span>
+        </button>
+
+        <button class="menu">
+          <div class="line one"></div>
+          <div class="line two"></div>
+        </button>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+      <section class="product-grid-section">
+        <div class="section-head">
+          <h1>Shop</h1>
+          <p>Explore Fossil's premium lifestyle clothing catalog, featuring high-end casual wear for the modern individual.</p>
+        </div>
+
+        <div class="product-grid">
+          <ul class="product-category-list">
+            <li class="category-wrapper">
+              <button class="category-btn category-btn-active" data-category-id="all">
+                <div>All</div>
+                <div>All</div>
+              </button>
+            </li>
+            <li class="category-wrapper">
+              <button class="category-btn" data-category-id="tops">
+                <div>Tops</div>
+                <div>Tops</div>
+              </button>
+            </li>
+            <li class="category-wrapper">
+              <button class="category-btn" data-category-id="bottoms">
+                <div>Bottoms</div>
+                <div>Bottoms</div>
+              </button>
+            </li>
+            <li class="category-wrapper">
+              <button class="category-btn" data-category-id="new">
+                <div>New</div>
+                <div>New</div>
+              </button>
+            </li>
+            <li class="category-wrapper">
+              <button class="category-btn" data-category-id="summer 2025">
+                <div>Summer 2025</div>
+                <div>Summer 2025</div>
+              </button>
+            </li>
+          </ul>
+
+          <div class="product-list">
+
+            <div class="product-card">
+              <div class="product-img">
+                <img src="https://framerusercontent.com/images/nh6WoW5ceB5GJiNvUEoSO5YfTxM.jpg" alt="" loading="lazy">
+              </div>
+              <div class="product-info">
+                <h3>Navy Tack Pant</h3>
+                <h3>$79.00</h3>
+              </div>
+              <button class="add-cart-btn">
+                QUICK ADD
+                <span class="add-icon">
+                  <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+              </button>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+
+      <section class="get-news-section">
+        <div class="get-news-img">
+          <img src="https://framerusercontent.com/images/cTav0REIYnsfxFtCU9aoFbxd0E.webp" alt="">
+        </div>
+        
+        <div>
+          <h2>Get in on the News</h2>
+          <form action="" method="post">
+            <h4>Subscribe to our newsletter</h4>
+            <div>
+              <input type="email" name="" id="" placeholder="Your email">
+              <input type="submit" value="JOIN">
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+
+      <div>
+        <form action="" class="subscribe" method="post">
+          <label for="email">Subscribe to our newsletter</label>
+          <div>
+            <input type="email" required placeholder="Your email" id="email">
+            <input type="submit" value="JOIN">
+          </div>
+        </form>
+
+        <nav class="footer-nav">
+          <div>
+            <h5>(Customer Care)</h5>
+            <ul>
+              <li><a href="">Account</a></li>
+              <li><a href="">Our Store</a></li>
+              <li><a href="">FAQ</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h5>(Navigate)</h5>
+            <ul>
+              <li><a href="">Shop</a></li>
+              <li><a href="">Brand</a></li>
+              <li><a href="">Journal</a></li>
+              <li><a href="">Contact</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h5>(Other)</h5>
+            <ul>
+              <li><a href="">Privacy</a></li>
+              <li><a href="">404</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <div>
+        <a href=""><img src="https://framerusercontent.com/images/s6IdE1T9pWMvaniOcb8tnaSRZWM.svg" alt=""></a>
+
+        <div>
+          <a href="">By Flowit Supply</a>
+          <span>©2025</span>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/JS/shop.js"></script>
+  </body>
+</html>
